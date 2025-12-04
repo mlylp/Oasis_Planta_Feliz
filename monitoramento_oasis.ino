@@ -35,11 +35,6 @@ const int NOTA_LA = 440;
 // Define o pino digital para o LED
 int led = 11;
 
-// ---
-
-## 🛠️ Função setup()
-
-```arduino
 void setup() {
   
    // Inicia a comunicação com o sensor DHT
