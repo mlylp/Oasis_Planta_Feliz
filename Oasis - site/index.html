@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oasis</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <div class="logo">Oasis</div>
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#autores">Equipe</a></li>
+          <li><a href="#tecnico">Técnico</a></li>
+          <li><a href="#passo-a-passo">Montagem</a></li>
+          <li><a href="#codigo">Código</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="container">
+        <h1>Oasis</h1>
+        <h2>Sistema de monitoração de planta</h2>
+        <a href="#sobre" class="btn">Conhecer o Projeto</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="sobre" class="section">
+        <div class="container">
+          <h3 class="section-title">O Projeto</h3>
+
+          <div class="grid-2">
+            <div class="card">
+              <h4>Motivação e Objetivo</h4>
+              <p>
+                <strong>Motivação:</strong> Como a falta de dados ambientais
+                afeta o cultivo de plantas.
+              </p>
+              <p>
+                <strong>Objetivo:</strong> Monitorar umidade, temperatura e
+                luminosidade para garantir condições ideais.
+              </p>
+              <p>
+                <strong>Contextualização:</strong> Uso de IoT/Automação
+                Agrícola.
+              </p>
+            </div>
+            <div class="card">
+              <h4>Esquema Conceitual</h4>
+              <img
+                src="esquema_Arduino_oasis.jpg"
+                alt="Esquema do circuito do Monitor de Plantas"
+              />
+            </div>
+          </div>
+
+          <div class="keywords">
+            <span>Automação</span>
+            <span>Monitoramento Ambiental</span>
+            <span>Arduino</span>
+            <span>Jardinagem</span>
+            <span>Eletrônica</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="autores" class="section bg-alt">
+        <div class="container">
+          <h3 class="section-title">Autores</h3>
+          <div class="autores-lista" id="autores-lista"></div>
+        </div>
+      </section>
+
+      <section id="tecnico" class="section">
+        <div class="container">
+          <h3 class="section-title">Especificações Técnicas</h3>
+
+          <div class="grid-2">
+            <div>
+              <h4>Hardware & Componentes</h4>
+              <ul class="tech-list">
+                <li><strong>01 Sensor de umidade DHT</strong></li>
+                <li><strong>01 Sensor de luminosidade LDR</strong></li>
+                <li><strong>02 Leds</strong></li>
+                <li><strong>01 Placa Black Board Uno R3</strong></li>
+                <li></li>
+                <li><strong>01 Buzzer</strong></li>
+                <li><strong>01 Resistor de 1.000 ohms</strong></li>
+                <li><strong>01 Potenciômetro de 10.000 ohms</strong></li>
+                <li><strong>01 Resistor de 220 ohms</strong></li>
+                <li><strong>01 LCD Display</strong></li>
+                <li><strong>23 Jumps</strong></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Softwares & Plataformas</h4>
+              <ul class="tech-list">
+                <li><strong>IDE:</strong> Arduino IDE / VS Code</li>
+                <li><strong>Linguagens:</strong> C++ (Arduino)</li>
+                <li>
+                  <strong>libraries do IDE:</strong>DHT .h e liquid crystal .h
+                </li>
+                <li><strong>Banco de Dados:</strong> MySQL ou PostgreSQL</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="passo-a-passo" class="section bg-alt">
+        <div class="container">
+          <h3 class="section-title">Montagem e Funcionamento</h3>
+
+          <div class="step">
+            <h4>1. Conexão do LCD (pinos: 7, 6, 5, 4, 3, 2)</h4>
+            <p>
+              primeiro, o lcd deve ser conectado aos pinos 7,6,5,4,3,2 usando
+              jumpers fêmeas/machos bem como os 2 pinos de alimentação e terra,
+              e deve-se também conectar um potenciometro ligado a entrada 3 do
+              lcd
+            </p>
+            <img src="lcd.png" alt="conexão do LCD" />
+          </div>
+
+          <div class="step">
+            <h4>2. Conexão do DHT11 (pino 13)</h4>
+            <p>
+              o sensor DHT deve-se ser conectado ao pino 13 com alimentação e
+              terra, com jumpers do mesmo tipo q o lcd
+            </p>
+            <img src="dht.png" alt="conexão do DHT11" />
+          </div>
+
+          <div class="step">
+            <h4>3.conexão do LDR (pino 0)</h4>
+            <p>
+              o pino o deve ser conectado ao analog 0 e o terra, com um resistor
+              de 1000 omhs e posicionado na parte exterior do dispositivo devido
+              a sua função de captar a luz
+            </p>
+            <p>
+              recomenda-se que os sensores devem ser fixados de alguma maneira
+              (EX: fita adesiva)
+            </p>
+            <img src="ldr.png" alt="conexão LDR" />
+          </div>
+
+          <div class="step">
+            <h4>4. conexão do buzzer (pino 9)</h4>
+            <p>
+              o buzzer deve estar conectado ao pino 9 com um resistor de 220 a
+              fim de deixar o audio mais alto
+            </p>
+            <img src="buzzer.png" alt="conexão do BUZZER" />
+          </div>
+
+          <div class="step">
+            <h4>5. conexão dos leds (pino 11)</h4>
+            <p>
+              os leds devem se conectar ao pino 11 e GND usando jumperes para
+              extender o alcance dos fios
+            </p>
+            <img src="led.png" alt="conexão dos LEDS" />
+          </div>
+
+          <div class="video-container">
+            <h4>Demonstração do Projeto</h4>
+            <div class="video-wrapper">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/SEU_VIDEO_ID"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="codigo" class="section">
+        <div class="container">
+          <h3 class="section-title">Código Fonte</h3>
+          <p>
+            Abaixo, um trecho essencial da lógica de leitura dos sensores no
+            Arduino:
+          </p>
+
+          <div class="shell-mac">
+            <div class="close"></div>
+            <div class="minimize"></div>
+            <div class="maximize"></div>
+          </div>
+          <div class="code-block">
+            <pre><code>
+// Exemplo simplificado da lógica do Arduino
+#include &lt;Wire.h&gt;
+#include &lt;Adafruit_MLX90614.h&gt;
+
+<h4>Trecho de Código: Lógica de Alerta (Função loop)</h4>
+<p>O trecho abaixo mostra a lógica principal de leitura e verificação de limites ambientais, acionando o LCD e o Buzzer quando necessário.</p>
+
+<div class="code-block">
+<pre><code>
+void loop() 
+  // Pausa por 2 segundos antes de fazer uma nova leitura
+  delay(2000);
+
+  // Lê LDR, Umidade (h) e Temperatura (t)
+  valorldr=analogRead(ldr);
+  float h = dht.readHumidity();
+  float t = dht.readTemperature();
+
+  // Verifica se a umidade está alta ou baixa
+  if (h>70) { humiplus = true; }
+
+</code></pre>
+          </div>
+
+          <div class="buttons-row">
+            <a href="LINK_DO_SEU_GITHUB" target="_blank" class="btn btn-outline"
+              >Ver Repositório no GitHub</a
+            >
+            <a href="caminho/para/seu_projeto.zip" download class="btn"
+              >Baixar Projeto Completo (.zip)</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="licoes" class="section bg-alt">
+        <div class="container">
+          <h3 class="section-title">Reflexões Finais</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>Desafios Enfrentados</h4>
+              <p>
+                <strong>Problema:</strong> Dificuldade em instalar e configurar
+                o display LCD
+              </p>
+              <p>
+                <strong>Solução:</strong> Pedimos ajuda a uma pessoa mais
+                experiente que nos mostrou como usar um template e código do
+                tinkercad para montar e testar o dispositivo.
+              </p>
+            </div>
+            <div class="card">
+              <h4>Lições Aprendidas</h4>
+              <ul>
+                <li>
+                  A importância de buscar ajuda e aprender com outras pessoas
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 - Oasis.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

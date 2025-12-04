@@ -1,0 +1,320 @@
+/* Variáveis de Cores - Tema Praia/Calma */
+:root {
+    --primary-blue: #0077b6;      /* Azul Oceano */
+    --soft-blue: #90e0ef;         /* Azul Céu */
+    --sand: #fdfcdc;              /* Areia suave */
+    --text-dark: #333333;
+    --white: #ffffff;
+    --bg-light: #f0f8ff;          /* Azul muito claro para fundo */
+    --accent-green: #2a9d8f;      /* Verde Mar */
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--white);
+}
+
+/* Utilitários */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a { text-decoration: none; }
+ul { list-style: none; }
+
+img{
+    width: 700px;
+    height: 400px;
+}
+
+.step img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 15px 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--white);
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--sand);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 119, 182, 0.8), rgba(42, 157, 143, 0.8)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.hero h1 { font-size: 4rem; margin-bottom: 10px; }
+.hero h2 { font-size: 2rem; font-weight: 300; margin-bottom: 20px; }
+.hero p { font-size: 1.2rem; margin-bottom: 30px; }
+
+/* Botões */
+.btn {
+    display: inline-block;
+    background-color: var(--accent-green);
+    color: var(--white);
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+    background-color: #21867a;
+    transform: scale(1.05);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--primary-blue);
+    color: var(--primary-blue);
+    margin-right: 10px;
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+/* Seções */
+.section { padding: 60px 0; }
+.bg-alt { background-color: var(--bg-light); }
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: var(--primary-blue);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-green);
+    margin: 10px auto 0;
+}
+
+/* Grids e Cards */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.card h4 { color: var(--accent-green); margin-bottom: 15px; }
+
+.img-placeholder {
+    background: #ddd;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    text-align: center;
+    color: #666;
+    border: 2px dashed #aaa;
+}
+
+/* Palavras Chave */
+.keywords {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.keywords span {
+    display: inline-block;
+    background: var(--sand);
+    color: #555;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Autores */
+.authors-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.author-card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    background-size: cover;
+}
+
+.autores-lista{
+    width: 100%; 
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+
+.links a { color: var(--primary-blue); font-size: 0.9rem; margin: 0 5px; }
+
+/* Lista Técnica */
+.tech-list { padding-left: 20px; }
+.tech-list li { margin-bottom: 10px; position: relative; }
+
+/* Código Block */
+.code-block {
+    background: #2f2d3d;
+    color: #f8f8f2;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    margin-bottom: 20px;
+}
+
+.shell-mac{
+    background: linear-gradient(to bottom, #ffff, #cfcfcf);
+    border: 1px solid #e4e4e4;
+    width: 100%;
+    height: 30px;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2px 20px;
+    gap: 4px;
+}
+
+.minimize, .maximize, .close{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.minimize{
+    background-color: #f6bb44;
+    
+}
+
+.maximize{
+    background-color: #5dc942;
+    
+}
+
+.close{
+    background-color: #ec5b53;
+
+}
+
+
+.buttons-row {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Video */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background: var(--text-dark);
+    color: #aaa;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .grid-2 { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2.5rem; }
+    .nav-links { display: none; } /* Menu simplificado para mobile */
+}
